@@ -16,5 +16,24 @@
 // 2. hashtable.insert() has runtime : O(1) : worse case O(n)
 // 3. hashtable.delete() has runtime : O(1) : worse case O(n)
 
+// TYPES OF HASH TABLES 
+1. Object{} // allows overwriting of native properties 
+2. Map{} // disallows overwriting of native properties to the hash table
+    // a: to push items to MAP, we must use set() method 
+    // b : e.g ( 
+    //     const mymap = new Map()
+    //     mymap.set("jack",'data-entry')
+    //     mymap.set('cincy', 'manager')
+    // )
+
+
+    // IMPLEMENTING HASH IN JAVASCRIPT 
+
+    class Hashtable {
+        constructor() {
+            this.table = new Array(127)
+            this.size = 0;
+        }
+    }
 
 

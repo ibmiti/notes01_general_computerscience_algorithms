@@ -4,7 +4,8 @@
 // 1. solving problems by breaking them down into sub problems, storing the solution to the subproblem just incase the solution is needed at a later step. ( usually within a loop )
 // 2. so dynamic programming allows us to save memory when building algorithms
 // 3. Memoization == Caching
-// 4. We use Caching used in algorithm == Dynamic programming 
+// 4. We use Caching/memoization in algorithms ( Dynamic programming )
+
 
 // EXAMPLES OF DYNAMIC PROGRAMMING ( DP ) BELOW : 
 
@@ -56,13 +57,18 @@ console.log('2', memoized(6));
 
 // 1. rememeber when you think of dynamic programming, think of caching
 
-function fibonacci(n){
+let calculations = 0;
+function fibonnaci_r(n){
+    calculations++;
     if (n < 2){
-        return n;
+        return n
     }
-    return fibonacci(n - 1) + fibonacci(n-2);
+    return fibonaci_r(n-1) + fibonaci_r(n-2);
 }
 
+
 fibonacci(7);
+fibonaci_r(23); // O(2n)
+
 
 
